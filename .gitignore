@@ -1,0 +1,102 @@
+# Directories #
+/build/
+bin/
+repos/
+/repos/
+doc/
+/doc/
+.gradle/
+/bin/
+target/
+
+# OS Files #
+.DS_Store
+
+# Ignore entire IntelliJ IDEA project directory
+/.idea/
+*.iml
+
+# User-specific / sensitive IDEA files (backup if .idea wasn't ignored for some reason)
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+.idea/libraries
+.idea/mongoSettings.xml
+*.iws
+/out/
+.idea_modules/
+
+# Plugin / IDE files
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+*.class
+browscap.csv
+gradle/wrapper
+gradlew.bat
+gradlew
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.db
+
+######################
+# Windows
+######################
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+######################
+# OSX
+######################
+
+.svn
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+######################
+# Eclipse
+######################
+
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+/src/main/resources/rebel.xml
+.externalToolBuilders/
+*.launch
+.cproject
+.buildpath
