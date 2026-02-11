@@ -1,0 +1,7 @@
+spring:
+  config:
+    import: optional:file:.env.properties
+
+bot:
+  botUsername: ${TELEGRAM_BOT_USERNAME}
+  token: ${TELEGRAM_BOT_TOKEN}

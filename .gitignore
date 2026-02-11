@@ -1,102 +1,126 @@
-# Directories #
-/build/
-bin/
-repos/
-/repos/
-doc/
-/doc/
-.gradle/
-/bin/
-target/
-
-# OS Files #
+### OS ###
+# macOS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Ignore entire IntelliJ IDEA project directory
-/.idea/
-*.iml
+# Windows
+Desktop.ini
+Thumbs.db
+$RECYCLE.BIN/
 
-# User-specific / sensitive IDEA files (backup if .idea wasn't ignored for some reason)
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/dataSources.local.xml
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
-.idea/gradle.xml
-.idea/libraries
-.idea/mongoSettings.xml
-*.iws
-/out/
-.idea_modules/
+# Linux
+*~
 
-# Plugin / IDE files
-atlassian-ide-plugin.xml
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
 
-*.class
-browscap.csv
-gradle/wrapper
-gradlew.bat
+### Build outputs ###
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
 gradlew
+gradlew.bat
+build/
+out/
 
-# Package Files #
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# General
+*.class
 *.jar
 *.war
 *.ear
+*.zip
+*.tar.gz
+*.rar
 *.db
 
-######################
-# Windows
-######################
 
-# Windows image file caches
-Thumbs.db
+### IDE ###
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+out/
 
-# Folder config file
-Desktop.ini
-
-######################
-# OSX
-######################
-
-.svn
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-######################
 # Eclipse
-######################
-
-*.pydevproject
 .project
+.classpath
+.settings/
 .metadata
-bin/**
-tmp/**
-tmp/**/*
+bin/
+tmp/
 *.tmp
 *.bak
 *.swp
 *~.nib
 local.properties
-.classpath
-.settings/
 .loadpath
-/src/main/resources/rebel.xml
+.cproject
 .externalToolBuilders/
 *.launch
-.cproject
-.buildpath
+
+
+### Editors ###
+# VS Code
+.vscode/
+*.swp
+*.swo
+*~
+
+
+### Project specific ###
+# Application
+.env.properties
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Optional REPL history
+.node_repl_history
+
+# Directories (упрощённая версия ваших каталогов)
+bin/
+doc/
+repos/
+
+
+### Custom patterns ###
+# Ваши специфичные файлы
+browscap.csv
+/src/main/resources/rebel.xml
+
+# Fabric/Crashlytics (если не используются)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+atlassian-ide-plugin.xml
