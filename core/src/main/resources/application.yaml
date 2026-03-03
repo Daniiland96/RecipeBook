@@ -1,0 +1,39 @@
+spring:
+  config:
+    import: optional:file:.env.properties
+  application:
+    name: core
+  output:
+    ansi:
+      enabled: always
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:recipe_book}
+    username: ${DB_USER:recipe_book}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+  liquibase:
+    enabled: true
+
+logging:
+  level:
+    org:
+      springframework:
+        orm:
+          jpa: TRACE
+          jpa.JpaTransactionManager: DEBUG
+        transaction: INFO
+        transaction.interceptor: TRACE
+      hibernate:
+        sql: DEBUG
+        orm.jdbc.bind: TRACE
+    liquibase: DEBUG

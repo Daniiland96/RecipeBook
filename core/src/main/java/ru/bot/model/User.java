@@ -1,13 +1,14 @@
 package ru.bot.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
-import lombok.*;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -20,10 +21,22 @@ public class User {
     @Id
     private String id;
 
+    @Column(nullable = false)
     private String name;
 
-    @ManyToMany
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private List<Chat> chats = new ArrayList<>();
+    @ManyToMany(mappedBy = "members")
+    private Set<Chat> chats = new HashSet<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Recipe> recipes = new HashSet<>();
+
+    public void joinChat(Chat chat) {
+        chats.add(chat);
+        chat.getMembers().add(this);
+    }
+
+    public void leaveChat(Chat chat) {
+        chats.remove(chat);
+        chat.getMembers().remove(this);
+    }
 }
